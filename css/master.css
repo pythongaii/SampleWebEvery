@@ -1,0 +1,69 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+main {
+    height: 100%;
+}
+
+#home {
+    height: 100%;
+}
+
+
+/* GoogleMap */
+
+/* 検索ボックス */
+.search-box-container {
+    position: absolute;
+    margin: 12px 0 12px 8px;
+    width: 392px;
+    height: 48px;
+    background-color: #fff;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    transition: left 0.5s;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    transition-property: -webkit-transform,transform,visibility,opacity;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.0,0.0,0.2,1);
+}
+.search-box {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    box-sizing: border-box;
+    width: 392px;
+    height: 48px;
+    border-bottom: 1px solid transparent;
+    padding: 12px 104px 11px 64px;
+    transition-property: background,box-shadow;
+    transition-duration: 0.3s;
+}
+/* 詳細エリア */
+.side-nav-visible {
+    opacity: 1;
+    height: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    background: #fff;
+
+}
+.side-nav {
+    width: 408px;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    /*opacity: 0;*/
+    /*height: 0;*/
+    left: 0;
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
+    transition-property: -webkit-transform,transform,opacity;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.0,0.0,0.2,1);
+}

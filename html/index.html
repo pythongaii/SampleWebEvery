@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Index</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Material Design Lite -->
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <!-- Material Design icon font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- GoogleMap API -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <script src="../js/map.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+<body onload="initialize();">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <!-- App bar START -->
+        <header class="mdl-layout__header">
+            <!-- Tabs START -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <!-- Home -->
+                <a href="#home" class="mdl-layout__tab is-active">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+                        <i class="material-icons">home</i>
+                    </label>
+                </a>
+                <!-- Favorite -->
+                <a href="#favorite" class="mdl-layout__tab">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+                        <i class="material-icons">favorite</i>
+                    </label>
+                </a>
+                <!-- Notifications -->
+                <a href="#notifications" class="mdl-layout__tab">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+                        <i class="material-icons">notifications</i>
+                    </label>
+                </a>
+                <div class="mdl-layout-spacer"></div>
+                <!-- Search field START -->
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="header-seach">
+                        <i class="material-icons">search</i>
+                    </label>
+                    <div class="mdl-textfield__expandable-holder">
+                        <input class="mdl-textfield__input" type="text" name="header-search" id="header-search">
+                    </div>
+                </div>
+                <!-- Search field END -->
+            </div>
+            <!-- Tabs END -->
+        </header>
+        <!-- App bar END -->
+        <main class="mdl-layout__content">
+            <!-- Home Tab -->
+            <div class="mdl-layout__tab-panel is-active" id="home">
+                <!-- Map -->
+                <div id="map" style="width:100%; height:100%;"></div>
+                <!-- Map内索ボックス -->
+                <div class="search-box-container">
+                    <div class="search-box"></div>
+                </div>
+                <!-- 詳細ナビ -->
+                <div class="side-nav side-nav-visible"></div>
+            </div>
+            <!-- Favorite Tab -->
+            <div class="mdl-layout__tab-panel" id="favorite">
+                <p>favorite</p>
+            </div>
+            <!-- Notifications Tab -->
+            <div class="mdl-layout__tab-panel" id="notifications">
+                <p>notifications</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
