@@ -8,10 +8,13 @@ main {
     height: 100%;
 }
 
-#home {
+#nearby {
     height: 100%;
 }
 
+.app-bar{
+    min-height: 48px;
+}
 
 /* GoogleMap */
 

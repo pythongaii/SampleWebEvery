@@ -19,19 +19,25 @@
 <body onload="initialize();">
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
         <!-- App bar START -->
-        <header class="mdl-layout__header">
+        <header class="mdl-layout__header app-bar">
             <!-- Tabs START -->
-            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect tab-bar">
                 <!-- Home -->
-                <a href="#home" class="mdl-layout__tab is-active">
+                <a href="#home" class="mdl-layout__tab">
                     <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
                         <i class="material-icons">home</i>
                     </label>
                 </a>
-                <!-- Favorite -->
-                <a href="#favorite" class="mdl-layout__tab">
+                <!-- Nearby -->
+                <a href="#nearby" class="mdl-layout__tab is-active">
                     <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
-                        <i class="material-icons">favorite</i>
+                        <i class="material-icons">room</i>
+                    </label>
+                </a>
+                <!-- Bookmark -->
+                <a href="#bookmark" class="mdl-layout__tab">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+                        <i class="material-icons">bookmark</i>
                     </label>
                 </a>
                 <!-- Notifications -->
@@ -42,12 +48,13 @@
                 </a>
                 <div class="mdl-layout-spacer"></div>
                 <!-- Search field START -->
-                <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
-                    <label class="mdl-button mdl-js-button mdl-button--icon" for="header-seach">
+                <div class="search-field">
+                    <label class="mdl-button mdl-js-button mdl-button--icon" for="search">
                         <i class="material-icons">search</i>
                     </label>
-                    <div class="mdl-textfield__expandable-holder">
-                        <input class="mdl-textfield__input" type="text" name="header-search" id="header-search">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input class="mdl-textfield__input" type="text" id="search">
+                        <label class="mdl-textfield__label" for="search">キーワード</label>
                     </div>
                 </div>
                 <!-- Search field END -->
@@ -57,7 +64,11 @@
         <!-- App bar END -->
         <main class="mdl-layout__content">
             <!-- Home Tab -->
-            <div class="mdl-layout__tab-panel is-active" id="home">
+            <div class="mdl-layout__tab-panel" id="home">
+                <p>home</p>
+            </div>
+            <!-- Nearby Tab -->
+            <div class="mdl-layout__tab-panel is-active" id="nearby">
                 <!-- Map -->
                 <div id="map" style="width:100%; height:100%;"></div>
                 <!-- Map内索ボックス -->
@@ -67,9 +78,9 @@
                 <!-- 詳細ナビ -->
                 <div class="side-nav side-nav-visible"></div>
             </div>
-            <!-- Favorite Tab -->
-            <div class="mdl-layout__tab-panel" id="favorite">
-                <p>favorite</p>
+            <!-- Bookmark Tab -->
+            <div class="mdl-layout__tab-panel" id="bookmark">
+                <p>bookmark</p>
             </div>
             <!-- Notifications Tab -->
             <div class="mdl-layout__tab-panel" id="notifications">
