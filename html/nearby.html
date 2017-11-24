@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Index</title>
+    <title>Nearby</title>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- GoogleMap API -->
@@ -13,7 +13,7 @@
     <script src="../js/master.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../css/master.css">
 </head>
-<body>
+<body onload="initialize();">
     <!-- App bar START -->
     <header class="app-bar">
         <!-- Tab START -->
@@ -26,7 +26,7 @@
             </li>
             <!-- Nearby -->
             <li>
-                <a href="./nearby.html" class="tab">
+                <a href="./nearby.html" class="tab is-active">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>Nearby
                 </a>
             </li>
@@ -64,5 +64,10 @@
         <!-- App bar extras END -->
     </header>
     <!-- App bar END -->
+    <main>
+        <div id="map">
+
+        </div>
+    </main>
 </body>
 </html>
