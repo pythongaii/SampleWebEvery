@@ -40,19 +40,38 @@ $(function() {
         $(this).toggleClass('on');
     });
 
+    $('.search-box-btn').hover(
+        function() {
+            if ($('#night-mode').hasClass('on')) {
+                $(this).css({
+                    'color': 'white'
+                });
+            } else {
+                $(this).css({
+                    'color': 'black'
+                });
+            }
+        },
+        function() {
+            $(this).css({
+                'color': 'gray'
+            });
+        }
+    );
+
     $('.event-images').hover(
         function() {
             $('.event-other-image').css({
                 'color': '#fffe',
                 'height': '75%',
-                'line-height': '17'
+                'line-height': '18'
             });
         },
         function() {
             $('.event-other-image').css({
                 'color': '#fffc',
                 'height': '50%',
-                'line-height': '10.75'
+                'line-height': '12'
             });
         }
     );
