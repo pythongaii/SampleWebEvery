@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="../vendor/font-awesome-4.7.0/css/font-awesome.min.css">
     <!-- My javascript & css files -->
     <script src="../js/master.js" charset="utf-8"></script>
+    <script src="../js/nearby.js" charset="utf-8"></script>
     <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/nearby.css">
 </head>
-<body onload="initialize();">
+<body>
     <!-- App bar START -->
     <header class="app-bar">
         <!-- Tab START -->
@@ -56,7 +58,7 @@
             <!-- Profile nav START -->
             <div class="profile-nav">
                 <a href="./index.html">
-                    <img src="../images/icon.png" alt="profile icon">
+                    <img src="../images/icon/icon.png" alt="profile icon">
                 </a>
             </div>
             <!-- Profile nav END -->
@@ -65,9 +67,139 @@
     </header>
     <!-- App bar END -->
     <main>
-        <div id="map">
-
+        <!-- GoogleMap -->
+        <div id="map"></div>
+        <!-- Serch box START -->
+        <div class="search-box-container">
+            <div class="search-box-btn menu">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="キーワード...">
+                <div class="search-box-btn search">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <div class="search-box-btn filter">
+                    <i class="fa fa-sliders" aria-hidden="true"></i>
+                </div>
+            </div>
         </div>
+        <!-- Search box END -->
+        <!-- Side nav START -->
+        <div class="side-nav">
+            <!-- <div class="search-box-btn menu">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </div> -->
+            <!-- Event header image -->
+            <div class="event-header-image">
+                <img src="../images/sample/sample1.jpg" alt="">
+            </div>
+            <!-- Event detail START -->
+            <div class="event-container">
+                <div class="side-nav-separator1"></div>
+                <!-- Title -->
+                <div class="event-title">
+                    <h2>イベントイベントイベント</h2>
+                </div>
+                <!-- Owner detail START -->
+                <div class="event-owner">
+                    <!-- Icon -->
+                    <div class="event-owner-icon">
+                        <img src="../images/icon/icon.png" alt="">
+                    </div>
+                    <!-- Name -->
+                    <div class="event-owner-name">
+                        主催者主催者主催者主催者
+                    </div>
+                    <div class="action-bookmark"></div>
+                </div>
+                <div class="side-nav-separator2"></div>
+                <!-- Owners detail END -->
+                <!-- <div class="action-container">
+                    <div class="action-history">
+                        <div class="action-details">
+                            <div class="action-icon">
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="fa fa-smile-o" aria-hidden="true"></i>
+                            </div>
+                            <div class="action-icon">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="action-counter">
+                            39Comments・16Shares
+                        </div>
+                    </div>
+                    <div class="action-btn-container">
+                        <div class="action-btn like">
+                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Like
+                        </div>
+                        <div class="action-btn comment">
+                            <i class="fa fa-comments-o" aria-hidden="true"></i>Comment
+                        </div>
+                        <div class="action-btn share">
+                            <i class="fa fa-share" aria-hidden="true"></i>Share
+                        </div>
+                    </div>
+                </div> -->
+                <div class="event-info-container">
+                    <div class="event-info-wrapper">
+                        <img src="../images/icon/clock.png" alt="">
+                        <div class="event-info">
+                            <p class="event-info-title">日時</p>
+                            <p>2017年2月25日 19:00 ~</p>
+                        </div>
+                    </div>
+                    <div class="side-nav-separator2"></div>
+                    <div class="event-info-wrapper">
+                        <img src="../images/icon/location.png" alt="">
+                        <div class="event-info">
+                            <p class="event-info-title">場所</p>
+                            <p onmouseover="$(this).attr('title',$(this).text())">〒520-0000 滋賀県蒲生郡竜王町大字田中000番地</p>
+                        </div>
+                    </div>
+                    <div class="side-nav-separator2"></div>
+                    <div class="event-info-wrapper">
+                        <img src="../images/icon/phone.png" alt="">
+                        <div class="event-info">
+                            <p class="event-info-title">連絡先</p>
+                            <p>090-0000-0000</p>
+                        </div>
+                    </div>
+                    <div class="side-nav-separator2"></div>
+                </div>
+                <div class="event-detail-container">
+                    <h3>詳細情報</h3>
+                    <div class="event-images">
+                        <!-- <div class="event-images-left">
+                            <img src="../images/icon/left.png" alt="">
+                        </div> -->
+                        <div class="event-image">
+                            <img src="../images/sample/sample1.jpg" alt="">
+                        </div>
+                        <div class="event-other-image">
+                            他3枚の画像
+                        </div>
+                        <!-- <div class="event-images-right">
+                            <img src="../images/icon/right.png" alt="">
+                        </div> -->
+                    </div>
+                    <div class="event-detail">
+                        <p>
+                            イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報<br>
+                            イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報<br>
+                            イベントの情報イベントの情報イベントの情報イベントの情報<br>
+                            イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="side-nav-separator1"></div>
+            </div>
+            <!-- Event detail END -->
+        </div>
+        <!-- Side nav END -->
     </main>
 </body>
 </html>

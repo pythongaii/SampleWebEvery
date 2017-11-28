@@ -1,0 +1,376 @@
+/* Google Map */
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+/* 検索ボックス */
+
+.search-box-container {
+    position: absolute;
+    margin: 12px 0 12px 8px;
+    width: 392px;
+    height: 48px;
+    left: 0px;
+    top: 48px;
+    z-index: 1;
+}
+
+.search-box {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    box-sizing: border-box;
+    width: 392px;
+    height: 48px;
+    border-bottom: 1px solid transparent;
+    border-radius: 3px;
+    padding: 12px 104px 11px 64px;
+    opacity: 1;
+    transition: opacity .3s;
+}
+
+.search-box input {
+    color: inherit;
+    font-size: 15px;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    height: 24px !important;
+    line-height: 24px;
+    border: none;
+    z-index: 6;
+    left: 0px;
+    outline: none;
+    background-color: transparent;
+}
+
+.search-box-btn {
+    position: absolute;
+    height: 48px;
+    width: 56px;
+    z-index: 1;
+    font-size: 1.25em;
+    line-height: 2.4;
+    text-align: center;
+    color: gray;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+}
+
+.search-box-btn:hover {
+    color: black;
+}
+
+.search-box-btn.search {
+    top: 0;
+    right: 54px;
+}
+
+.search-box-btn.filter {
+    top: 0;
+    right: 0;
+}
+
+.search-box-btn i {
+    display: block;
+    padding: 14px 15px;
+}
+
+/* 詳細エリア */
+
+.side-nav {
+    position: absolute;
+    height: 100%;
+    width: 408px;
+    box-sizing: border-box;
+    padding-top: 48px;
+    top: 0;
+    left: -408px;
+    opacity: 0;
+    background: #fff;
+    overflow: scroll;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+
+.side-nav.visible {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    left: 0px;
+    opacity: 1;
+}
+
+.side-nav-btn.close {
+    background-color: beige;
+    width: 56px;
+    height: 48px;
+}
+
+/* イベントの詳細 */
+
+.event-container {
+    height: 100%;
+    width: 100%;
+    padding: 0px 15px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.event-header-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.event-header-image img {
+    width: 100%;
+}
+
+.event-title h2 {
+    margin: 15px 0 5px 0;
+}
+
+.event-owner {
+    width: 100%;
+    height: 56px;
+    padding-bottom: 5px;
+}
+
+.event-owner-icon {
+    display: inline-block;
+    width: 54px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: auto;
+    padding: 6px 5px;
+    box-sizing: border-box;
+}
+
+.event-owner-icon img {
+    height: 44px;
+    width: 44px;
+}
+
+.event-owner-name {
+    display: inline-block;
+    height: 100%;
+    width: 73%;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    line-height: 2;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.action-bookmark {
+    display: inline-block;
+    overflow: auto;
+    width: 42px;
+    height: 100%;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    background-image: url("../images/icon/bookmark-off.svg");
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 12px 10px 12px 5px;
+    background-origin: content-box;
+    float: right;
+}
+
+.action-bookmark:hover {
+    opacity: 0.7;
+}
+
+.action-bookmark.on {
+    background-image: url("../images/icon/bookmark-on.svg");
+}
+
+.side-nav-separator1 {
+    height: 3px;
+    width: calc(100% + 30px);
+    margin: 0 -15px;
+    border-top: 1px solid #acacac;
+    border-bottom: 1px solid #acacac;
+    background-image: linear-gradient(
+        -45deg,
+        #fff 25%,
+        #acacac 25%, #acacac 50%,
+        #fff 50%, #fff 75%,
+        #acacac 75%, #acacac 100%);
+    background-size: 3px 4px;
+}
+
+.side-nav-separator2 {
+    border-top: 1px solid #8e8e8e;
+}
+
+/* レビュー・リアクション履歴 */
+/*
+.action-details {
+    position: relative;
+}
+
+.action-icon {
+    display: inline-block;
+    box-sizing: content-box;
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid;
+    box-shadow: 0 0 0 3px white;
+    background: #ffd6d6;
+}
+
+.action-icon:nth-of-type(1) {
+    position: absolute;
+    z-index: 3;
+    left: 0px;
+}
+
+.action-icon:nth-of-type(2) {
+    position: absolute;
+    z-index: 2;
+    left: 17px;
+}
+
+.action-icon:nth-of-type(3) {
+    position: absolute;
+    z-index: 1;
+    left: 34px;
+}
+
+.action-btn {
+
+}*/
+
+/* イベントの詳細情報 */
+.event-info-container {
+    padding: 15px 0;
+}
+
+.event-info-wrapper {
+    height: 50px;
+    padding: 7px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.event-info-wrapper img {
+    height: 32px;
+    width: 32px;
+    margin: 9px 0 9px 5px;
+}
+
+.event-info {
+    display: inline-block;
+    width: 86%;
+}
+
+.event-info-title {
+    font-weight: bold;
+}
+
+.event-info p {
+    margin: 0 0 0 7px;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.event-detail-container {
+    margin: 10px 0;
+}
+
+.event-detail p {
+    margin-left: 7px;
+}
+
+.event-images {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    position: relative;
+    cursor: pointer;
+}
+
+/*.event-images-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 44px;
+    height: 44px;
+    margin: auto;
+    background-color: #0000006e;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.event-images-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 44px;
+    height: 44px;
+    margin: auto;
+    background-color: #0000006e;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.event-images-left img,
+.event-images-right img {
+    width: 32px;
+    height: 32px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+}*/
+
+.event-other-image {
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: right;
+    color: #fffc;
+    height: 50%;
+    width: 90%;
+    background-image: linear-gradient(transparent , #000a);
+    margin: auto;
+    line-height: 10.75;
+    padding-right: 10px;
+    box-sizing: border-box;
+    transition: all .1s;
+}
+
+.event-image {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    padding-left: 5%;
+    padding-right: 5%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.event-image img {
+    width: 100%;
+}
