@@ -65,6 +65,14 @@
     right: 54px;
 }
 
+.search-box-separator {
+    position: absolute;
+    height: 34px;
+    border-left: 1px solid #acacac;
+    top: 8px;
+    right: 55px;
+}
+
 .search-box-btn.filter {
     top: 0;
     right: 0;
