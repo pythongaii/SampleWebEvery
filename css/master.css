@@ -11,6 +11,13 @@ main {
     box-sizing: border-box;
     position: relative;
 }
+#night-mode{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: transparent;
+    z-index: 10000;
+}
 
 /* App Bar */
 .app-bar{

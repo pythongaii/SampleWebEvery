@@ -17,7 +17,6 @@ $(function() {
     $('#night-mode').click(function() {
         $(this).toggleClass('on');
         if ($(this).hasClass('on')) {
-            $(this).html('おはようモード');
             $('.app-bar').css({
                 'background-color': '#1c1c1c'
             });
@@ -45,7 +44,6 @@ $(function() {
                 'border-top': '1px solid #dedede'
             });
         } else {
-            $(this).html('おやすみモード');
             $('.app-bar').css({
                 'background-color': '#fff'
             });
