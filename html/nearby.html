@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="../css/nearby.css">
 </head>
 <body>
-    <div id="night-mode"></div>
     <!-- App bar START -->
     <header class="app-bar">
         <!-- Tab START -->
@@ -31,11 +30,11 @@
                 </a>
             </li>
             <!-- Nearby -->
-            <li>
+            <!-- <li>
                 <a href="./nearby.html" class="tab is-active">
                     <i class="fa fa-map-marker" aria-hidden="true"></i>近くのイベント
                 </a>
-            </li>
+            </li> -->
             <!-- Bookmark -->
             <li>
                 <a href="./bookmark.html" class="tab">
@@ -54,7 +53,7 @@
         <div class="nav-extras">
             <!-- Search box START -->
             <div class="search">
-                <form class="" action="" method="post">
+                <form class="" action="nearby.html" method="post">
                     <input type="text" name="" placeholder="検索...">
                 </form>
             </div>
@@ -87,6 +86,7 @@
     </header>
     <!-- App bar END -->
     <main>
+        <div id="night-mode"></div>
         <!-- GoogleMap -->
         <div id="map"></div>
         <!-- Serch box START -->
@@ -120,92 +120,81 @@
                 <div class="side-nav-separator1"></div>
                 <!-- Title -->
                 <div class="event-title">
-                    <h2>イベントイベントイベント</h2>
+                    <h2>花澤香菜のひとりでできるかな？公開録音</h2>
+                    <div class="action-bookmark"></div>
                 </div>
                 <!-- Owner detail START -->
                 <div class="event-owner">
                     <!-- Icon -->
-                    <div class="event-owner-icon">
-                        <img src="../images/icon/icon.png" alt="">
-                    </div>
+                    <img src="../images/icon/icon.png" alt="">
                     <!-- Name -->
-                    <div class="event-owner-name">
-                        主催者主催者主催者主催者
+                    <div class="event-owner-detail">
+                        <p class="event-owner-name">むらた ゆきや</p>
+                        <p class="event-owner-id">@yKicchan</p>
                     </div>
-                    <div class="action-bookmark"></div>
                 </div>
                 <div class="side-nav-separator2"></div>
                 <!-- Owners detail END -->
-                <!-- <div class="action-container">
-                    <div class="action-history">
-                        <div class="action-details">
-                            <div class="action-icon">
-                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                            </div>
-                            <div class="action-icon">
-                                <i class="fa fa-smile-o" aria-hidden="true"></i>
-                            </div>
-                            <div class="action-icon">
-                                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                        <div class="action-counter">
-                            39Comments・16Shares
-                        </div>
+                <div class="rate-container">
+                    <div class="star-container">
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
+                        <div class="star"></div>
                     </div>
-                    <div class="action-btn-container">
-                        <div class="action-btn like">
-                            <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Like
-                        </div>
-                        <div class="action-btn comment">
-                            <i class="fa fa-comments-o" aria-hidden="true"></i>Comment
-                        </div>
-                        <div class="action-btn share">
-                            <i class="fa fa-share" aria-hidden="true"></i>Share
-                        </div>
+                    <div class="rate-wrapper">
+
                     </div>
-                </div> -->
+                </div>
+                <div class="action-btn-container">
+                    <div class="action-btn">
+                        <div class="like"></div>
+                        <p>Like</p>
+                    </div>
+                    <div class="action-btn">
+                        <div class="comment"></div>
+                        <p>Comment</p>
+                    </div>
+                    <div class="action-btn">
+                        <div class="share"></div>
+                        <p>Share</p>
+                    </div>
+                </div>
+                <div class="side-nav-separator2"></div>
                 <div class="event-info-container">
                     <div class="event-info-wrapper">
-                        <img src="../images/icon/clock.png" alt="">
+                        <div class="clock"></div>
                         <div class="event-info">
-                            <p class="event-info-title">日時</p>
-                            <p>2017年2月25日 19:00 ~</p>
+                            <p class="event-info-main">2017/2/25(日) 15:00</p>
+                            <p>他23件の日程</p>
                         </div>
                     </div>
-                    <div class="side-nav-separator2"></div>
                     <div class="event-info-wrapper">
-                        <img src="../images/icon/location.png" alt="">
+                        <div class="location"></div>
                         <div class="event-info">
-                            <p class="event-info-title">場所</p>
-                            <p onmouseover="$(this).attr('title',$(this).text())">〒520-0000 滋賀県蒲生郡竜王町大字田中000番地</p>
+                            <p>〒520-0000</p>
+                            <p class="event-info-main" onmouseover="$(this).attr('title',$(this).text())">滋賀県蒲生郡竜王町大字田中000番地</p>
                         </div>
                     </div>
-                    <div class="side-nav-separator2"></div>
                     <div class="event-info-wrapper">
-                        <img src="../images/icon/phone.png" alt="">
+                        <div class="phone"></div>
                         <div class="event-info">
-                            <p class="event-info-title">連絡先</p>
-                            <p>090-0000-0000</p>
+                            <p>連絡先</p>
+                            <p class="event-info-main">090-0000-0000</p>
                         </div>
                     </div>
-                    <div class="side-nav-separator2"></div>
                 </div>
+                <div class="side-nav-separator1"></div>
                 <div class="event-detail-container">
                     <h3>詳細情報</h3>
                     <div class="event-images">
-                        <!-- <div class="event-images-left">
-                            <img src="../images/icon/left.png" alt="">
-                        </div> -->
                         <div class="event-image">
                             <img src="../images/sample/sample1.jpg" alt="">
                         </div>
                         <div class="event-other-image">
                             他3枚の画像
                         </div>
-                        <!-- <div class="event-images-right">
-                            <img src="../images/icon/right.png" alt="">
-                        </div> -->
                     </div>
                     <div class="event-detail">
                         <p>
@@ -215,6 +204,46 @@
                             イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報イベントの情報<br>
                         </p>
                     </div>
+                </div>
+                <div class="side-nav-separator1"></div>
+                <div class="upcoming-date-container">
+                    <h3>開催予定日</h3>
+                    <div class="side-nav-separator2"></div>
+                    <div class="upcoming-date-wrapper">
+                        <div class="upcoming-date">
+                            <p class="month">Feb</p>
+                            <p class="day">25</p>
+                        </div>
+                        <div class="upcoming-date-info">
+                            <p class="info">Fri 10:00 a.m.</p>
+                            <p class="host">主催者: xxxxxxx</p>
+                        </div>
+                        <div class="action-bookmark"></div>
+                    </div>
+                    <div class="upcoming-date-wrapper">
+                        <div class="upcoming-date">
+                            <p class="month">Feb</p>
+                            <p class="day">25</p>
+                        </div>
+                        <div class="upcoming-date-info">
+                            <p class="info">Fri 10:00 a.m.</p>
+                            <p class="host">主催者: xxxxxxx</p>
+                        </div>
+                        <div class="action-bookmark"></div>
+                    </div>
+                    <div class="upcoming-date-wrapper">
+                        <div class="upcoming-date">
+                            <p class="month">Feb</p>
+                            <p class="day">25</p>
+                        </div>
+                        <div class="upcoming-date-info">
+                            <p class="info">Fri 10:00 a.m.</p>
+                            <p class="host">主催者: xxxxxxx</p>
+                        </div>
+                        <div class="action-bookmark"></div>
+                    </div>
+                    <div class="side-nav-separator2"></div>
+                    <div class="upcoming-date-see-all">See all dates...</div>
                 </div>
                 <div class="side-nav-separator1"></div>
             </div>

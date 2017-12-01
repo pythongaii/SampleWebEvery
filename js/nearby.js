@@ -35,11 +35,6 @@ $(function() {
         }
     });
 
-    // ブックマーク
-    $('.action-bookmark').click(function() {
-        $(this).toggleClass('on');
-    });
-
     $('.search-box-btn').hover(
         function() {
             if ($('#night-mode').hasClass('on')) {

@@ -56,11 +56,11 @@ $(function() {
                 'background': '#fff'
             });
             $('.search-box input').css({
-                'color': '#000'
+                'color': ''
             });
             $('.side-nav').css({
                 'background': '#fff',
-                'color': '#000'
+                'color': ''
             });
             $('.side-nav-separator1').css({
                 'border-top': '1px solid #acacac',
@@ -71,5 +71,14 @@ $(function() {
                 'border-top': '1px solid #8e8e8e'
             });
         }
+    });
+
+    // ブックマーク
+    $('.action-bookmark').click(function() {
+        $(this).toggleClass('on');
+    });
+
+    $(".bookmark").on('click', function(){
+        $(this).toggleClass('on');
     });
 });
